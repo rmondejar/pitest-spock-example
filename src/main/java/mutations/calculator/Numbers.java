@@ -2,9 +2,9 @@ package mutations.calculator;
 
 public class Numbers {
 
-    public static boolean isNatural(int number) {
+    public boolean isNatural(int num) {
         boolean result = false;
-        if (number >= 0) {
+        if (num >= 0) {
             result = true;
         }
         return result;

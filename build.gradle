@@ -9,7 +9,6 @@ repositories {
 }
 
 dependencies {
-    compile "org.codehaus.groovy:groovy:3.0.7"
     testCompile platform("org.spockframework:spock-bom:2.0-M4-groovy-3.0")
     testCompile "org.spockframework:spock-core"
 }
@@ -19,10 +18,6 @@ pitest {
     junit5PluginVersion = '0.12'
     targetClasses = ['mutations.*']
     threads = 4
-    outputFormats = ['XML', 'HTML']
+    outputFormats = ['HTML']
     timestampedReports = false
-}
-
-test {
-    useJUnitPlatform()
 }

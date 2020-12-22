@@ -16,7 +16,7 @@ class NumbersSpec extends Specification {
 
         where:
         num | result
-        10  | true
+        0  | true
         50  | true
         -10 | false
         -50 | false
