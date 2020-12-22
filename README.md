@@ -1,4 +1,4 @@
-#Spock2 – Pitest mutation examples
+# Mutation Testing with PITest and Spock 2
 Spock 2 + PITest + Gradle
 
 Article: [Mutation Testing with PITest and Spock 2](https://ruuben.medium.com/mutation-testing-with-pitest-and-spock-2-dc4451d285dd)
