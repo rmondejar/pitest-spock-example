@@ -1,0 +1,28 @@
+plugins {
+    id 'groovy'
+    id "info.solidsoft.pitest" version '1.5.2'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy:3.0.7"
+    testCompile platform("org.spockframework:spock-bom:2.0-M4-groovy-3.0")
+    testCompile "org.spockframework:spock-core"
+}
+
+pitest {
+    //adds dependency to org.pitest:pitest-junit5-plugin and sets "testPlugin" to "junit5"
+    junit5PluginVersion = '0.12'
+    targetClasses = ['mutations.*']
+    threads = 4
+    outputFormats = ['XML', 'HTML']
+    timestampedReports = false
+}
+
+test {
+    useJUnitPlatform()
+}
